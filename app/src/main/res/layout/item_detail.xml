@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/item_detail"
+             style="?android:attr/textAppearanceLarge"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/background"
+             tools:context=".ItemDetailFragment">
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/movieImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp"
+                    tools:src="@tools:sample/backgrounds/scenic"
+                    android:scaleType="centerCrop"
+            />
+
+            <TextView
+                    android:id="@+id/movieTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    tools:text="The Great Gatsby"
+                    android:layout_below="@+id/movieImage"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_margin="16dp"
+            />
+
+            <TextView
+                    android:id="@+id/movieDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@tools:sample/lorem/random"
+                    android:lineSpacingExtra="1.2dp"
+                    android:textColor="@android:color/white"
+                    android:layout_below="@+id/movieTitle"
+                    android:layout_alignStart="@+id/movieTitle"
+                    android:layout_alignEnd="@id/movieTitle"
+            />
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>
